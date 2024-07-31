@@ -1,6 +1,7 @@
 "use client";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Navbar from "../components/Navbar";
 
 interface DataProps {
   name: {
@@ -32,6 +33,7 @@ const About = () => {
 
   return (
     <div>
+      <Navbar />
       <div className="bg-green-200 w-full h-[100vh]">
         {user && (
           <div>

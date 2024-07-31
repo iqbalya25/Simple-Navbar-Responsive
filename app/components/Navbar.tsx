@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-const Home = () => {
+const Navbar = () => {
   const [isShow, setIsShow] = useState(false);
   const [navBg, setNavBg] = useState("bg-slate-300");
 
@@ -27,22 +27,24 @@ const Home = () => {
   }, []);
 
   return (
-    <>
+    <div className={`sticky top-0 z-50 ${navBg}`}>
       {!isShow && (
-        <div
-          className={`hidden md:grid grid-cols-3 justify-between p-2 ${navBg} sticky top-0 z-50`}
-        >
-          <div>Logo</div>
-          <div>
-            <ul className="flex flex-row gap-2 px-2">
-              <li>Home</li>
-              <li>
-                <Link href="/about">About</Link>
-              </li>
-              <li>Career</li>
-            </ul>
+        <div>
+          <div className={`hidden md:grid grid-cols-3 justify-between p-2 `}>
+            <div>Logo</div>
+            <div>
+              <ul className="flex flex-row gap-2 px-2">
+                <li>
+                  <Link href="/">Home</Link>
+                </li>
+                <li>
+                  <Link href="/about">About</Link>
+                </li>
+                <li>Career</li>
+              </ul>
+            </div>
+            <div className="text-right">Login</div>
           </div>
-          <div className="text-right">Login</div>
         </div>
       )}
 
@@ -60,7 +62,9 @@ const Home = () => {
           </button>
           <div>
             <ul className="flex flex-col gap-2 px-2">
-              <li>Home</li>
+              <li>
+                <Link href="/">Home</Link>
+              </li>
               <li>
                 <Link href="/about">About</Link>
               </li>
@@ -69,13 +73,8 @@ const Home = () => {
           </div>
         </div>
       )}
-
-      <div>
-        <div className="bg-green-200 w-full h-[100vh]">Hello</div>
-        <div className="bg-red-200 w-full h-[100vh]">Hello</div>
-      </div>
-    </>
+    </div>
   );
 };
 
-export default Home;
+export default Navbar;
