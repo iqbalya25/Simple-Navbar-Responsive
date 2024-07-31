@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 const Home = () => {
@@ -35,7 +36,9 @@ const Home = () => {
           <div>
             <ul className="flex flex-row gap-2 px-2">
               <li>Home</li>
-              <li>About</li>
+              <li>
+                <Link href="/about">About</Link>
+              </li>
               <li>Career</li>
             </ul>
           </div>
@@ -58,7 +61,9 @@ const Home = () => {
           <div>
             <ul className="flex flex-col gap-2 px-2">
               <li>Home</li>
-              <li>About</li>
+              <li>
+                <Link href="/about">About</Link>
+              </li>
               <li>Career</li>
             </ul>
           </div>
