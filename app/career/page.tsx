@@ -13,6 +13,16 @@ const data: DataProps[] = [
   { id: 3, name: "Purchasing" },
   { id: 4, name: "Accountant" },
   { id: 5, name: "Manager" },
+  { id: 6, name: "Supervisor" },
+  { id: 7, name: "Foreman" },
+  { id: 8, name: "Caps" },
+  { id: 9, name: "Leader" },
+  { id: 10, name: "Junior" },
+  { id: 11, name: "Security" },
+  { id: 12, name: "Operator" },
+  { id: 13, name: "Duelist" },
+  { id: 14, name: "Sentinel" },
+  { id: 15, name: "Medic" },
 ];
 
 const Career: React.FC = () => {
